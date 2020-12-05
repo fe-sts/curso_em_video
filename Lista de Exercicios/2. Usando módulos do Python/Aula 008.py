@@ -5,7 +5,7 @@
 
 
 #import random
-#num = random.randint(1, 10)
+#num = random.randint(1, 10) #Randomizar um numero de 1 a 10
 #print(num)
 
 #import emoji
