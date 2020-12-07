@@ -8,4 +8,4 @@ for a in range(4):
     cont_aluno += 1
 
 random.shuffle(alunos)
-print(alunos)
+print('A ordem sorteada foi: {}'.format(alunos))
