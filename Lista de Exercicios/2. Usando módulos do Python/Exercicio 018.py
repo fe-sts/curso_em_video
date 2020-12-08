@@ -2,6 +2,7 @@
 import math
 angulo = float(input('Digite o ângulo para saber os valores de seu seno e cosseno: '))
 
-seno = math.sin(angulo)
-cos = math.cos(angulo)
-print('Para o ângulo de {}º, o seno é {} e o cosseno é {}'.format(angulo, seno, cos))
+seno = math.sin(math.radians(angulo))
+cos = math.cos(math.radians(angulo))
+tan = math.tan(math.radians(angulo))
+print('Para o ângulo de {}º, o seno é {:.3f}, o cosseno é {:.3f} e a tangente é {:.3f}'.format(angulo, seno, cos, tan))
