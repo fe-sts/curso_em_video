@@ -35,4 +35,5 @@ lista.split() #Onde tiver espaços e cria uma divisão --> Cada palavra vira uma
 #Funcionalidades de Junção
 -.join(lista) #Junta todas as listas separando por "-"
 
+#______________________________________#
 
