@@ -10,3 +10,5 @@ print('Seu nome UPPER: {}'.format(nome.upper()))
 print('Seu nome lower: {}'.format(nome.lower()))
 print('Nº de letras sem espaços (começo e final): {}'.format(len(nome.strip())))
 print('Nº de letras sem espaços (começo, final e meio): {}'.format(len("".join(nome.split()))))
+nome1 = nome[:nome.find(' ')]
+print('Quantas letras tem o 1o nome {}'.format(nome1))
