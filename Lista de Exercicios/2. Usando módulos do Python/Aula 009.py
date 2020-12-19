@@ -37,3 +37,16 @@ lista.split() #Onde tiver espaços e cria uma divisão --> Cada palavra vira uma
 
 #______________________________________#
 
+import random
+#num2 = (random.randrange(0,9999))
+
+num = str(random.randrange(1000,9999))
+print(num)
+print(num[0])
+print(num[1])
+print(num[2])
+print(num[3])
+
+print(list('teste'))
+
+print(9//2) # entendendo o retorno da parte Inteira da divisão
