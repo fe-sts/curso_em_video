@@ -1,13 +1,21 @@
 #Crie um programa que leia o nome de uma cidade e diga se ela começa com a palavra SANTO
 
-cidade = str(input('Digite o nome de sua cidade: '))
-santo = cidade.upper()
+cidade = list(input('Digite o nome de sua cidade: '))
+#santo = cidade.upper()
 #verifica = ('SANTO' in santo)
 
-if ('SANTO' in santo) == True:
-    print('Cidade começa com SANTO')
+
+santo = ''.join(map(str, cidade[0:6]))
+santo_m = santo.upper()
+if ('SANTO' in santo_m) == True:
+    print('tem SANTO no começo!')
 else:
-    print('cidade Não começa com SANTO')
+    print('não tem Santo no começo')
+
+#if ('SANTO' in santo) == True:
+#    print('Cidade começa com SANTO')
+#else:
+#    print('cidade Não começa com SANTO')
 
 
 #cidade2 = list(input('Digite o nome de sua cidade lista: '))
