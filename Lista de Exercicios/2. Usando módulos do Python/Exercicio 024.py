@@ -20,3 +20,7 @@ else:
 
 #cidade2 = list(input('Digite o nome de sua cidade lista: '))
 #print(cidade2[1].upper())
+
+#Outro jeito
+cid = str(input('Em que cidade você nasceu? ')).strip()
+print(cid[:5].upper() == 'SANTO')
