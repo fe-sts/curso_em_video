@@ -6,3 +6,7 @@ if ('SILVA' in nome_mai) == True:
     print('Tem Silva no nome')
 else:
     print('não tem Silva no nome')
+
+#Outro jeito
+nome2 = str(input('Qual seu nome(2)?: ')).strip()
+print('Seu nome tem Silva? {}'.format('SILVA' in nome2.upper()))
