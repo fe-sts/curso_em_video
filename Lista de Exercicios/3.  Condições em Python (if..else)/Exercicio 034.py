@@ -8,3 +8,5 @@ if salario > 1250:
     print('O novo salario é de {:.2f}'.format(salario * 1.1))
 elif salario <= 1250:
     print('O novo salario é de {:.2f}'.format(salario * 1.15))
+
+#if | elif | float
