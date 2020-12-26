@@ -3,9 +3,13 @@
 #O programa deverá escrever na tela se o usuário venceu ou perdeu
 
 from random import randint
+from time import sleep
+
 num_comp = randint(0, 5)
-print(num_comp)
+#print(num_comp)
 num_usuario = int(input('O Computador escolheu um numero de 0 a 5.\nAdivinhe qual foi: '))
+print('PROCESSANDO...')
+sleep(2)
 
 if num_usuario <= 5:
     if num_usuario == num_comp:
