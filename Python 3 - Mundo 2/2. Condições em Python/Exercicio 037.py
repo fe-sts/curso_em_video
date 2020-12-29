@@ -1,4 +1,4 @@
-'''Escreva um programa que leia um numero interio qualquer a peça para o usuarioescolher qual será a base de
+'''Escreva um programa que leia um numero inteiro qualquer a peça para o usuarioescolher qual será a base de
 conversão:
 1: binário
 2: octal
