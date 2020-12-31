@@ -22,4 +22,6 @@ elif cond_pagto == 2:
 elif cond_pagto == 3:
     print('O valor a ser pago é R${} [preço normal]'.format(vlr_prod))
 elif cond_pagto == 4:
-    print('O valor a ser pago é R${} [20% de juros]'.format(vlr_prod * 1.2))
+    parcelas = int(input('Em quantas parcelas você vai pagar? '))
+    print('Sua compra será parcelada em {}x de R${:.2f}'.format(parcelas, (vlr_prod * 1.2) / parcelas))
+    print('O valor total a ser pago é R${} [20% de juros]'.format(vlr_prod * 1.2))
