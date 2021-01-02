@@ -21,3 +21,4 @@ print('dezena: {}'.format(d))
 print('centena: {}'.format(c))
 print('milhar: {}'.format(m))
 print(num%1000)
+
