@@ -13,7 +13,6 @@ sexo_pessoa = ''
 
 for c in range(1, 5):
     nome_novo = (input('Digite o Nome da {}ª pessoa: '.format(c)).strip())
-    #nomes.append(nome_novo)
     idade_novo = int(input('Digite a Idade da {}ª pessoa: '.format(c)).strip())
     sexo_novo = (input('Digite o Sexo da {}ª pessoa (M/F): '.format(c)).strip())
     pessoas.append({'Nome': nome_novo,
@@ -29,9 +28,9 @@ for i in range(0, len(pessoas)):
     elif sexo_pessoa == 'F':
         if (pessoas[i]['Idade']) < 20: #Quantas mulheres com menos de 20 anos
             m_20 += 1
-    todas_idades += pessoas[i]['Idade'] #Para o Calculo da Média de Idade
+    todas_idades += pessoas[i]['Idade'] #Soma as idades de todas as pessoas
 
-idade_media = todas_idades / len(pessoas)
+idade_media = todas_idades / len(pessoas) #Calcula a média de idade do grupo
 print('-='*60)
 print('A idade média das {} pessoas é: {}'.format((len(pessoas)), idade_media))
 print('A idade do homem mais velho é: {}'.format(h_velho))
