@@ -1,16 +1,17 @@
-''' *******INCOMPLETO AINDA ***********
+'''
 Desenvolva um programa que leia o Nome, Idade e Sexo de 4 pessoas.
 No final do programa, mostre:
 - A média de idade do grupo
 - Qual é o nome do Homem mais velho
 - Quantas mulheres tem menos de 20 anos
 '''
-#PRIMEIRA TENTATIVA: utilizando Dicionário
-
 pessoas = []
-idade_todas = 0
-cont_id = 0
-for c in range(1, 3):
+todas_idades = 0
+h_velho = 0
+m_20 = 0
+sexo_pessoa = ''
+
+for c in range(1, 5):
     nome_novo = (input('Digite o Nome da {}ª pessoa: '.format(c)).strip())
     #nomes.append(nome_novo)
     idade_novo = int(input('Digite a Idade da {}ª pessoa: '.format(c)).strip())
@@ -18,14 +19,21 @@ for c in range(1, 3):
     pessoas.append({'Nome': nome_novo,
                     'Idade': idade_novo,
                     'Sexo': sexo_novo}) #Cria um dicionário com os dados das pessoas
+    print('*' * 60)
 
-'''for i in range(1, 3):
-    idade_todas += pessoas[i]['Idade']
-    cont_id += 1'''
-idade_media = (idade_todas/cont_id)
-print('Média de idade do grupo é de: {}'.format(idade_media))
+for i in range(0, len(pessoas)):
+    sexo_pessoa = pessoas[i]['Sexo']
+    if sexo_pessoa == 'M':
+        if (pessoas[i]['Idade']) >= todas_idades: #Pega a Idade do homem mais velho
+            h_velho = pessoas[i]['Idade']
+    elif sexo_pessoa == 'F':
+        if (pessoas[i]['Idade']) < 20: #Quantas mulheres com menos de 20 anos
+            m_20 += 1
+    todas_idades += pessoas[i]['Idade'] #Para o Calculo da Média de Idade
 
-print(pessoas)
-print(pessoas[1]['Idade'])
-
-
+idade_media = todas_idades / len(pessoas)
+print('-='*60)
+print('A idade média das {} pessoas é: {}'.format((len(pessoas)), idade_media))
+print('A idade do homem mais velho é: {}'.format(h_velho))
+print('A quantidade de mulheres com menos de 20 anos é: {}'.format(m_20))
+print('-='*60)
