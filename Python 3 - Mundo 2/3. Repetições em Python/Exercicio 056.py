@@ -8,6 +8,7 @@ No final do programa, mostre:
 pessoas = []
 todas_idades = 0
 h_velho = 0
+nome_h_velho = ''
 m_20 = 0
 sexo_pessoa = ''
 
@@ -22,17 +23,18 @@ for c in range(1, 5):
 
 for i in range(0, len(pessoas)):
     sexo_pessoa = pessoas[i]['Sexo']
-    if sexo_pessoa == 'M':
+    if sexo_pessoa in 'Mm':
         if (pessoas[i]['Idade']) >= todas_idades: #Pega a Idade do homem mais velho
             h_velho = pessoas[i]['Idade']
-    elif sexo_pessoa == 'F':
+            nome_h_velho = pessoas[i]['Nome']
+    elif sexo_pessoa in 'Ff':
         if (pessoas[i]['Idade']) < 20: #Quantas mulheres com menos de 20 anos
             m_20 += 1
     todas_idades += pessoas[i]['Idade'] #Soma as idades de todas as pessoas
 
 idade_media = todas_idades / len(pessoas) #Calcula a média de idade do grupo
 print('-='*60)
-print('A idade média das {} pessoas é: {}'.format((len(pessoas)), idade_media))
-print('A idade do homem mais velho é: {}'.format(h_velho))
-print('A quantidade de mulheres com menos de 20 anos é: {}'.format(m_20))
+print('A idade média das {} pessoas é {} anos'.format((len(pessoas)), idade_media))
+print('A idade do homem mais velho é {} e ele se chama {}'.format(h_velho, nome_h_velho))
+print('A quantidade de mulheres com menos de 20 anos é {}'.format(m_20))
 print('-='*60)
