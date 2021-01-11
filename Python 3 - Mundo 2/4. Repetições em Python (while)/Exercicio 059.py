@@ -1,4 +1,4 @@
-''' ******* NÃO TERMINEI ***********
+'''
 Crie um programa que leia 2 valores e mostre um menu na tela:
 [1] somar
 [2] multiplicar
