@@ -24,13 +24,14 @@ while cont != 5:
           '[5] sair do programa')
     acao = int(input('-->').strip())
     if acao == 1:
-        print('Soma: {} + {} = {}'.format(num1, num2, num1 + num2))
+        print('Soma entre {} + {} = {}'.format(num1, num2, num1 + num2))
     elif acao == 2:
-        print('Soma: {} x {} = {}'.format(num1, num2, num1 * num2))
+        print('Multiplicação entre {} x {} = {}'.format(num1, num2, num1 * num2))
     elif acao == 3:
         lista = [num1, num2]
         print('Entre {} e {}, o maior número é {}'.format(num1, num2, max(lista)))
     elif acao == 4:
+        print('Novos números: ')
         num1 = int(input('Digite o 1o valor: ').strip())
         num2 = int(input('Digite o 2o valor: ').strip())
     elif acao == 5:
