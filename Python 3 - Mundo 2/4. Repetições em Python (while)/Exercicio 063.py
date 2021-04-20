@@ -5,7 +5,7 @@ Ex.: 0 -> 1 -> 1 -> 2 -> 3 -> 5 -> 8
 
 {\displaystyle F_{n}=F_{n-1}+F_{n-2},}
 '''
-
+'''
 termo_fibo = int(input('Digite quanto termos desejado da Sequência de Fibonacci: ').strip())
 cont = termo_fibo
 cont2 = 0
@@ -19,6 +19,34 @@ while fibo < termo_fibo:
     zero = fibo - zero
     if fibo == 0:
         fibo = fibo + 1
+'''
+
+#Outra resolução
+
+print('-='*50)
+print('Sequência de Fibonacci')
+print('-='*50)
+
+n = int(input('Quantos termos você quer mostrar? ').strip())
+t1 = 0
+t2 = 1
+print('{} \n{}'.format(t1, t2))
+
+
+cont = 3
+while cont <= n:
+    t3 = t1 + t2
+    print(t3)
+    t1 = t2
+    t2 = t3
+    cont += 1
+print("FIM programa.")
+
+
+
+
+
+
 
 
 
