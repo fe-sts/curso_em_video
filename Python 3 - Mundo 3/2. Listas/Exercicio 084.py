@@ -36,5 +36,3 @@ print(f'O maior peso foi: {maior}. Peso de: ', end='')
 for i in principal:
     if i[1] == maior:
         print(i[0])
-
-print(principal)
