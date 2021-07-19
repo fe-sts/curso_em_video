@@ -7,7 +7,7 @@ from datetime import datetime, date
 
 def calculate_age(nasc):
     today = date.today()
-    return today.year - nasc.year - ((today.month, today.day) < (nasc.month, nasc.day))
+    return today.year - nasc.year
 
 dados = dict()
 nasc = 0
