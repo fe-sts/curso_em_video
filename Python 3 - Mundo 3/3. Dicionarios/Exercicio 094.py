@@ -21,13 +21,17 @@ while True:
         else:
             print("ERRO: Digite M ou F")
     conjunto["idade"] = int(input("Idade: "))
+    soma_idade += conjunto["idade"]
     lista.append(conjunto.copy())
     cont = input("Quer continuar? [S/N] ")
     if cont in "Nn":
         break
     
 print(lista)
-print(f'Ao todo temos {len(lista)} pessoas cadastradas.')
-
+print(f'A) Ao todo temos {len(lista)} pessoas cadastradas.')
+media = soma_idade/len(lista)
+print(f'B) A média de idade é de {media} anos.')
+print('C) A lista de pessoas que estão acima da média: ')
 for indice, valor in enumerate(lista):
-    print(indice, valor)
+    if valor["idade"] > media:
+        print(f'nome = {valor["nome"]}' f'; sexo = {valor["sexo"]}' f' idade = {valor["idade"]}')
