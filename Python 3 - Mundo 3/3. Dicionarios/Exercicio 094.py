@@ -7,7 +7,6 @@ B) A média de idade
 C) Uma lista com as mulheres
  D) Uma lista de pessoas com idade acima da média'''
 
-
 conjunto = dict()
 lista = list()
 soma_idade = 0
@@ -30,7 +29,7 @@ while True:
 print(lista)
 print(f'A) Ao todo temos {len(lista)} pessoas cadastradas.')
 media = soma_idade/len(lista)
-print(f'B) A média de idade é de {media} anos.')
+print(f'B) A média de idade é de {media:5.2f} anos.')
 print('C) A lista de pessoas que estão acima da média: ')
 for indice, valor in enumerate(lista):
     if valor["idade"] > media:
