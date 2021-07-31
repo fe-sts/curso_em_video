@@ -34,10 +34,13 @@ while True:
     if resp == 'N':
         break
     
-
+for indice, valor in enumerate(time):
+    print(f'{indice} {valor["Nome"]}')
 
 for indice, valor in enumerate(time):
-    print(indice, valor)
+    print(f'{indice:>3} {valor["Nome"]:<15}')
+
+
 
 '''
 print("-+"*30)
