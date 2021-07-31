@@ -12,13 +12,29 @@ info = dict()
 num = 0
 gols = list()
 total = 0
+time = list()
 
-info["Nome"] = input("Nome: ")
-num = int(input("Quantas partidas o jogador X jogou? "))
-for gol in range(num):
-    gols.append(int(input(f"Quantos gols na partida {gol+1}? ")))
-info["Gols"] = gols
-info["Total"] = sum(gols)
+while True:
+    info.clear()
+    info["Nome"] = input("Nome: ")
+    num = int(input("Quantas partidas o jogador X jogou? "))
+    for gol in range(num):
+        gols.append(int(input(f"Quantos gols na partida {gol+1}? ")))
+    info["Gols"] = gols
+    info["Total"] = sum(gols)
+    time.append(gols.copy)
+
+    while True:
+        resp = str(input("Quer cotinuar? (S/N) ").upper()[0])
+        if resp in 'SN':
+            break
+        else:
+            print('ERRO! Digite S ou N.')
+    if resp == 'N':
+        break
+
+
+
 
 print("-+"*30)
 print(info)
