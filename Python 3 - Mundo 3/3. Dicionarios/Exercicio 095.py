@@ -20,9 +20,10 @@ while True:
     num = int(input("Quantas partidas o jogador X jogou? "))
     for gol in range(num):
         gols.append(int(input(f"Quantos gols na partida {gol+1}? ")))
-    info["Gols"] = gols
+    info["Gols"] = gols[:]
     info["Total"] = sum(gols)
-    time.append(gols.copy)
+    time.append(info.copy())
+    del gols[:]
 
     while True:
         resp = str(input("Quer cotinuar? (S/N) ").upper()[0])
@@ -32,16 +33,30 @@ while True:
             print('ERRO! Digite S ou N.')
     if resp == 'N':
         break
+    
 
 
+for indice, valor in enumerate(time):
+    print(indice, valor)
 
-
+'''
 print("-+"*30)
 print(info)
 print("-+"*30)
 for chave, valor in info.items():
     print(f'o campo: {chave}, tem o valor: {valor}')
+'''
+print('-'*40)
+for indice, valor in enumerate(time):
+    print(f'{indice:>3}', end='')
+    for d in valor.values():
+        print(f'{str(valor):<15}', end='')
+    print()
+print('-'*40)
+
+'''
 print("-+"*30)
 print(f' O jogador {info["Nome"]} marcou {info["Total"]} gols.')
 for indice, valor in enumerate(info["Gols"]):
     print(f'    ==> Na partida {indice+1}, fez {valor} gols.')
+'''
