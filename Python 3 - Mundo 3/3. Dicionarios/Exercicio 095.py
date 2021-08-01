@@ -13,6 +13,7 @@ num = 0
 gols = list()
 total = 0
 time = list()
+cod = 0
 
 while True:
     info.clear()
@@ -34,32 +35,26 @@ while True:
     if resp == 'N':
         break
     
-for indice, valor in enumerate(time):
-    print(f'{indice} {valor["Nome"]}')
+
+print("-="*30)
+print("cod ", end='')
+for indice in info.keys():
+    print(f'{indice:<15}', end='')
+print()
+print("--"*30)
 
 for indice, valor in enumerate(time):
-    print(f'{indice:>3} {valor["Nome"]:<15}')
+    print(f'{indice:>2} {valor["Nome"]:<15} {valor["Gols"]} {valor["Total"]:>10}')
 
-
-
-'''
-print("-+"*30)
-print(info)
-print("-+"*30)
-for chave, valor in info.items():
-    print(f'o campo: {chave}, tem o valor: {valor}')
-'''
-print('-'*40)
-for indice, valor in enumerate(time):
-    print(f'{indice:>3}', end='')
-    for d in valor.values():
-        print(f'{str(valor):<15}', end='')
-    print()
-print('-'*40)
-
-'''
-print("-+"*30)
-print(f' O jogador {info["Nome"]} marcou {info["Total"]} gols.')
-for indice, valor in enumerate(info["Gols"]):
-    print(f'    ==> Na partida {indice+1}, fez {valor} gols.')
-'''
+while True:
+    cod = int(input("Deseja ver os dados de qual jogador? (999 para sair)"))
+    if cod == 999:
+        print("Fim programa.")
+        break
+    if cod >= len(time):
+        print(f"ERRO! Escolha um jogador existente. Não existe o indice {cod}")
+    else:
+        print(f' -- DADOS DO JOGADOR: {time[cod]["Nome"]}')
+        for indice, valor in enumerate(time[cod]["Gols"]):
+            print(f'     No jogo {indice+1} fez {valor} gols.')
+        print("-"*40)
